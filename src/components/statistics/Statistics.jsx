@@ -36,7 +36,11 @@ const Statistics = ({
 export default Statistics;
 
 Statistics.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.object.PropTypes.shape({
+    good: PropTypes.number,
+    neutral: PropTypes.number,
+    bad: PropTypes.number,
+  }),
   good: PropTypes.number.isRequired,
   neutral: PropTypes.number.isRequired,
   bad: PropTypes.number.isRequired,
